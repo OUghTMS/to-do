@@ -22,7 +22,7 @@ class App extends Component {
   render() {
     const swch = this.state.isOpen && <LeftBar />
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className="app">
           {swch}
           <RightSec open={this.state.isOpen} hide={this.hideButton}/>
